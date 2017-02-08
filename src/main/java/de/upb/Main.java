@@ -23,7 +23,7 @@ public class Main {
     static {
         try {
             FLOW_SRC_HOST = InetAddress.getLocalHost();
-            FLOW_DST_HOST = InetAddress.getLocalHost();
+            FLOW_DST_HOST = InetAddress.getByName("google.com");
         } catch (UnknownHostException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
