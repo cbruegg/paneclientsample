@@ -35,9 +35,9 @@ public class Main {
         client.authenticate(PANE_USERNAME);
 
         PaneRelativeTime start = new PaneRelativeTime();
-        start.setRelativeTime(0); // Now
+        start.setRelativeTime(500); // Now
         PaneRelativeTime end = new PaneRelativeTime();
-        end.setRelativeTime(1000); // In 1000 ms (I think? Unit unclear, but should be ms)
+        end.setRelativeTime(5000); // In 1000 ms (I think? Unit unclear, but should be ms)
 
         PaneFlowGroup flowGroup = new PaneFlowGroup();
         flowGroup.setSrcHost(FLOW_SRC_HOST);
