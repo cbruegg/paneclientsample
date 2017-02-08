@@ -8,7 +8,7 @@ import java.net.InetAddress;
 public class Main {
 
     private static final String PANE_CONTROLLER_HOSTNAME = "localhost";
-    private static final int PANE_CONTROLLER_PORT = 9000;
+    private static final int PANE_CONTROLLER_PORT = 4242;
     private static final String PANE_USERNAME = "username";
     private static final int RESERVATION_BANDWIDTH_BITS_P_S = 1024;
     private static final int FLOW_PROTOCOL = PaneFlowGroup.PROTO_TCP;
