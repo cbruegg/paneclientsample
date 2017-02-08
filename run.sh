@@ -1,3 +1,3 @@
 git pull
-mvn build
+mvn compile
 mvn exec:java -Dexec.mainClass="de.upb.Main"
