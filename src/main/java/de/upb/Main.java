@@ -37,6 +37,7 @@ public class Main {
         PaneReservation reservation = new PaneReservation(RESERVATION_BANDWIDTH_BITS_P_S, flowGroup, start, end);
 
         PaneShare share = new PaneShare("sample_share", MAX_RESERVATIONS, flowGroup);
+        share.setClient(client);
         share.reserve(reservation);
     }
 }
