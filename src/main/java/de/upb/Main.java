@@ -22,8 +22,8 @@ public class Main {
 
     static {
         try {
-            FLOW_SRC_HOST = InetAddress.getLocalHost();
-            FLOW_DST_HOST = InetAddress.getByName("127.0.1.2");
+            FLOW_SRC_HOST = InetAddress.getByName("10.0.0.1");
+            FLOW_DST_HOST = InetAddress.getByName("10.0.0.2");
         } catch (UnknownHostException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
