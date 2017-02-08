@@ -18,7 +18,7 @@ public class Main {
     private static final int FLOW_SRC_PORT = 80;
     private static final InetAddress FLOW_DST_HOST;
     private static final int FLOW_DST_PORT = 80;
-    private static final int MAX_RESERVATIONS = 5;
+    private static final int MAX_RESERVATIONS = Integer.MAX_VALUE;
 
     static {
         try {
