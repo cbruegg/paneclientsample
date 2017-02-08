@@ -4,6 +4,7 @@ import edu.brown.cs.paneclient.*;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class Main {
 
@@ -12,11 +13,22 @@ public class Main {
     private static final String PANE_USERNAME = "username";
     private static final int RESERVATION_BANDWIDTH_BITS_P_S = 1024;
     private static final int FLOW_PROTOCOL = PaneFlowGroup.PROTO_TCP;
-    private static final InetAddress FLOW_SRC_HOST = null; // Something here
-    private static final int FLOW_SRC_PORT = -1; // Something here
-    private static final InetAddress FLOW_DST_HOST = null; // Something here
-    private static final int FLOW_DST_PORT = -1; // Something here
+    private static final InetAddress FLOW_SRC_HOST;
+
+    private static final int FLOW_SRC_PORT = 80;
+    private static final InetAddress FLOW_DST_HOST;
+    private static final int FLOW_DST_PORT = 80;
     private static final int MAX_RESERVATIONS = Integer.MAX_VALUE;
+
+    static {
+        try {
+            FLOW_SRC_HOST = InetAddress.getLocalHost();
+            FLOW_DST_HOST = InetAddress.getLocalHost();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void main(String[] args) throws IOException, PaneException.InvalidResvException, PaneException.InvalidAuthenticateException {
         PaneClient client = new PaneClientImpl(InetAddress.getByName(PANE_CONTROLLER_HOSTNAME), PANE_CONTROLLER_PORT);
