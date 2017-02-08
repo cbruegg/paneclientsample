@@ -18,6 +18,7 @@ public class PaneClientImpl implements PaneClient {
 	Socket _serverSock;
 	
 	public PaneClientImpl(InetAddress serverIP, int serverPort) throws IOException {
+		System.out.println("Trying to connect to PANE at " + serverIP + ":" + serverPort);
 		_serverIP = serverIP;
 		_serverPort = serverPort;
 		_serverSock = new Socket(serverIP,serverPort);
